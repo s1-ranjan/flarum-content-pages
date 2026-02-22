@@ -1,30 +1,17 @@
 <?php
 
-namespace Dhtml\FlarumContentPages;
+namespace Dhtml\ContentPages;
 
-use Carbon\Carbon;
-use Dhtml\FlarumLanguageTranslator\Formatter;
 use Flarum\Database\AbstractModel;
-use Flarum\Database\ScopeVisibilityTrait;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/**
- * @property string $hash
- * @property string $source
- * @property string $locale
- * @property string $translation
- */
 class Page extends AbstractModel
 {
-    use ScopeVisibilityTrait;
+    protected $table = 'content_pages';
 
-    /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
-    protected $table = 'cpages';
-
-    protected $dates = ['time'];
-
+    protected $fillable = [
+        'title',
+        'slug',
+        'content',
+        'is_published'
+    ];
 }
