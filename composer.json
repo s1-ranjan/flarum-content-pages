@@ -1,55 +1,22 @@
 {
-    "name": "dhtml/flarum-content-pages",
-    "description": "Create custom flarum content pages",
-    "keywords": [
-        "flarum"
-    ],
-    "type": "flarum-extension",
-    "license": "GPL-1.0-or-later",
-    "require": {
-        "flarum/core": "^1.2.0"
-    },
-    "authors": [
-        {
-            "name": "Anthony Ogundipe",
-            "email": "diltony@yahoo.com",
-            "role": "Developer"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Dhtml\\FlarumContentPages\\": "src/"
-        }
-    },
-    "extra": {
-        "flarum-extension": {
-            "title": "Flarum Content Pages",
-            "category": "feature",
-            "icon": {
-                "name": "far fa-eye",
-                "backgroundColor": "#008000",
-                "color": "#fff"
-            }
-        },
-        "flarum-cli": {
-            "modules": {
-                "admin": true,
-                "forum": true,
-                "js": true,
-                "jsCommon": true,
-                "css": true,
-                "locale": true,
-                "gitConf": true,
-                "githubActions": true,
-                "prettier": true,
-                "typescript": true,
-                "bundlewatch": true,
-                "backendTesting": false,
-                "editorConfig": true,
-                "styleci": false
-            }
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "s1-ranjan/flarum-content-pages",
+  "description": "Static content pages for Flarum",
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dhtml\\ContentPages\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Content Pages",
+      "icon": {
+        "name": "fas fa-file-alt"
+      }
+    }
+  }
 }
